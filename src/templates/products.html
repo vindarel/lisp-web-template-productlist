@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container" style="margin-bottom: 5em">
+  <div class="section">
+    <div class="box">
+      {% include "search-form.html" %}
+    </div>
+
+    <div class="row columns is-multiline is-mobile">
+
+      {% if no-results %}
+      <div> No results !</div>
+      {% endif %}
+
+      {% for product in products %}
+      <div class="column is-one-fifth-desktop is-half-mobile">
+        <div class="card" id="{{ product.id }}">
+          <div class="card-image">
+            <figure class="image">
+              <img src="{{ product.cover }}" alt="Cover of {{ product.title }}"/>
+            </figure>
+          </div>
+          <div class="card-content">
+            <div class="media">
+              <div class="media-content">
+                <p class="title is-5 no-padding">{{ product.title }}</p>
+                <p>
+                  <a href="#">
+                    <span class="tag"> {{ product.category }} </span>
+                  </a>
+                </p>
+
+	        <span class="has-text-grey-light"> {{ product.price | price }} €</span>
+                <span  class="icon is-medium" style="cursor: pointer;" title="Add to cart" onclick="console.log('add {{ product.id }} to cart')">
+                  <i class="fas fa-lg fa-plus-circle"></i>
+                </span>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% endblock %}

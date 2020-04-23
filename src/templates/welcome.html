@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="hero is-info is-fullheight">
+  <div class="hero-head"> </div>
+
+  <div class="hero-body">
+    <div class="container has-text-justified">
+      <div class="column is-6 is-offset-3">
+        <h2 class="subtitle">
+          Welcome on our awesome website.
+        </h2>
+        <div class="box">
+          {% include "search-form.html" %}
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
