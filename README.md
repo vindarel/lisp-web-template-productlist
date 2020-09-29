@@ -51,7 +51,7 @@ Load `myproject.asd` (`C-c C-k` in Slime), `(ql:quickload :myproject)` and then 
 
 TODO:
 
-* load static files
+* [X] load static files => use the regular `(hunchentoot:create-folder-dispatcher-and-handler #p"/path/to/static/")`.
 * anything more useful for a web app
 
 See also:
