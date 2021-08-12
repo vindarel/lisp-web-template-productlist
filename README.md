@@ -11,8 +11,7 @@ Start building an app quickly.
 
 Uses [Bulma CSS](https://bulma.io) and used [Bulma templates examples](https://bulmatemplates.github.io/bulma-templates/).
 
-See also the [Caveman](https://github.com/fukamachi/caveman) framework
-that provides a project skeleton.
+See also our [cl-cookieweb](https://github.com/vindarel/cl-cookieweb) project generator.
 
 
 Welcome screen:
