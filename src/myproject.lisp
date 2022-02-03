@@ -26,7 +26,7 @@
   "Read the configuration variables (contact information,…) from the `*config-file*'."
   (let ((file (uiop:native-namestring *config-file*)))
     (let ((*package* *package*))
-      (in-package abstock)
+      (in-package myproject)
       (load file))))
 
 ;;
