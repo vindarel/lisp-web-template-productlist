@@ -1,5 +1,5 @@
 
-# Build a binay.
+# Build a binary.
 build:
 	sbcl --load myproject.asd \
 	     --eval '(ql:quickload :myproject)' \
