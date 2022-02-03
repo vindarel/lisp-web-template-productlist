@@ -24,8 +24,12 @@ Searching products:
 
 
 ## How to run the app
+   
+Create a starter config file:
 
-Two possibilities to run it from the command line:
+    touch ~/.myproject.lisp
+
+There are two possibilities to run the app from the command line:
 
     rlwrap sbcl --load run.lisp
 
@@ -41,7 +45,6 @@ Or build the binary and run it:
 Set the port:
 
     PORT=9999 rlwrap sbcl --load run.lisp
-
 
 ## Develop
 
