@@ -24,10 +24,6 @@ Searching products:
 
 
 ## How to run the app
-   
-Create a starter config file:
-
-    touch ~/.myproject.lisp
 
 There are two possibilities to run the app from the command line:
 
@@ -45,6 +41,17 @@ Or build the binary and run it:
 Set the port:
 
     PORT=9999 rlwrap sbcl --load run.lisp
+
+### Config file
+
+You can use a starter configuration file:
+
+    touch ~/.myproject.lisp
+
+In there, you can do anything in Lisp. You probably want to write things after `(in-package myproject)`, but that is not mandatory. For example, you can overwrite the `get-products` function.
+
+The file will be `load`'ed at startup, in the context of the `myproject` package.
+
 
 ## Develop
 

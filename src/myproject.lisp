@@ -25,9 +25,11 @@
 (defun load-init ()
   "Read the configuration variables (contact information,…) from the `*config-file*'."
   (let ((file (uiop:native-namestring *config-file*)))
-    (let ((*package* *package*))
-      (in-package myproject)
-      (load file))))
+    (if (uiop:file-exists-p file)
+        (let ((*package* *package*))
+          (in-package myproject)
+          (load file))
+        (format t "Config file ~a not found.~&" file))))
 
 ;;
 ;; Get products.
